@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/main.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/iliaroger/netflix-amp-server/issues"
   },
-  "homepage": "https://github.com/iliaroger/netflix-amp-server#readme"
+  "homepage": "https://github.com/iliaroger/netflix-amp-server#readme",
+  "dependencies": {
+    "apollo-datasource-rest": "^3.4.0",
+    "apollo-server": "^3.5.0",
+    "argon2": "^0.28.2",
+    "firebase": "^9.4.1",
+    "graphql": "^16.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
