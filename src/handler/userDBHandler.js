@@ -17,9 +17,4 @@ class FirestoreAPI extends RESTDataSource {
   }
 }
 
-// const data = [
-//   { firstName: 'John', lastName: 'Mjölnir' },
-//   { firstName: 'Gabe', lastName: 'Gabeson' },
-// ];
-
 module.exports = FirestoreAPI;

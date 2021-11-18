@@ -1,7 +1,8 @@
 const { ApolloServer } = require('apollo-server');
 const Schema = require('./entities/schema.js');
 const Resolvers = require('./resolvers/resolvers');
-const FirestoreAPI = require('./handler/apiHandler');
+const FirestoreAPI = require('./handler/userDBHandler');
+const MovieAPI = require('./handler/movieDBHandler');
 
 const app = async (typeDefs, resolvers) => {
   const server = new ApolloServer({
@@ -10,6 +11,7 @@ const app = async (typeDefs, resolvers) => {
     dataSources: () => {
       return {
         apiHandler: new FirestoreAPI(),
+        movieHandler: new MovieAPI(),
       };
     },
     introspection: process.env.NODE_ENV !== 'production',
